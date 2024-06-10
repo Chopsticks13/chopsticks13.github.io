@@ -14,6 +14,11 @@ body {
   min-height: 100vh;
   font-family: sans-serif;
   background: #FFF;
+  transition: background-color 0.3s, color 0.3s;
+}
+body.dark-mode {
+  background: #333;
+  color: #f7f7f7;
 }
 .messages {
   overflow: auto;
@@ -29,6 +34,8 @@ body {
   line-height: 1.25rem;
   border-radius: 1.25rem;
   transform-origin: 0 100%;
+  background: #007aff;
+  color: white;
 }
 .bubble:before {
   content: "";
@@ -51,7 +58,6 @@ body {
   left: 0;
 }
 .bubble.left {
-  background: rgba(206,206,206,0.50);
   border-bottom-left-radius: 0;
 }
 .bubble.loading {
@@ -74,5 +80,27 @@ body {
   display: block;
 }
 .bubble a {
-  color: #0076FF;
+  color: #ffffff;
 }
+#toggle-dark-mode {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: #007aff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 0.3rem 0.6rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s, transform 0.3s;
+}
+#toggle-dark-mode:hover {
+  background: #005bb5;
+  transform: scale(1.05);
+}
+#toggle-dark-mode:focus {
+  outline: none;
+}
+
