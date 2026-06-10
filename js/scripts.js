@@ -14,9 +14,8 @@ var getCurrentTime = function() {
 }
 
 var messages = [
-  'Hey there 👋',
-  'I\'m Zakaria',
-  'Platform Engineer — I build the platform so teams can ship faster ☁️',
+  'Hi, I\'m Zak :)',
+  'I build platforms, pipelines, and the glue in between ☁️',
   'I also contribute to open source tools I use daily 🔧<br><a target="_blank" href="https://chopsticks13.github.io/contributions">See my contributions</a>',
   'Multi-cloud certified 🏆<br><a target="_blank" href="https://www.credly.com/users/zakaria-hassan.8fef1ede/badges">View badges on Credly</a>',
   '<a target="_blank" href="https://www.linkedin.com/in/zakaria-hassan/">LinkedIn</a> · <a target="_blank" href="https://medium.com/@zakaria.hassan">Medium</a> · <a target="_blank" href="https://github.com/Chopsticks13">GitHub</a>',
