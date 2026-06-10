@@ -13,7 +13,3 @@ This is my personal website showcasing my work as a Cloud Engineering Consultant
 - JavaScript
 - [Anime.js](https://animejs.com/)
 
-## How to Use
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Chopsticks13/chopsticks13.github.io.git
