@@ -30,12 +30,14 @@ body.dark-mode {
   overflow: hidden;
   display: inline-block;
   margin: 2.5rem 0 .125rem -2.5rem;
-  padding: .5rem 0rem .5rem 1rem;
+  padding: .5rem 1rem;
   line-height: 1.25rem;
   border-radius: 1.25rem;
   transform-origin: 0 100%;
   background: #007aff;
   color: white;
+  max-width: 85vw;
+  word-wrap: break-word;
 }
 .bubble:before {
   content: "";
@@ -102,5 +104,11 @@ body.dark-mode {
 }
 #toggle-dark-mode:focus {
   outline: none;
+}
+@media (max-width: 480px) {
+  :root { font-size: 1rem; }
+  .messages { padding: 0.75rem; }
+  .bubble { margin: 1.5rem 0 .125rem -1.5rem; }
+  #toggle-dark-mode { font-size: 0.75rem; padding: 0.25rem 0.5rem; }
 }
 
