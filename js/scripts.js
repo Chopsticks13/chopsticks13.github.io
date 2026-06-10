@@ -15,8 +15,8 @@ var getCurrentTime = function() {
 
 var messages = [
   'Hi, I\'m Zak :)',
-  'I build platforms, pipelines, and the glue in between ☁️',
-  'I also contribute to open source tools I use daily<br><a target="_blank" href="https://chopsticks13.github.io/contributions">See my contributions</a>',
+  'I build platforms, pipelines,<br>and the glue in between ☁️',
+  'Open source contributor<br><a target="_blank" href="https://chopsticks13.github.io/contributions">See my contributions</a>',
   'Multi-cloud certified 🏆<br><a target="_blank" href="https://www.credly.com/users/zakaria-hassan.8fef1ede/badges">View badges on Credly</a>',
   '<a target="_blank" href="https://www.linkedin.com/in/zakaria-hassan/">LinkedIn</a> · <a target="_blank" href="https://medium.com/@zakaria.hassan">Medium</a> · <a target="_blank" href="https://github.com/Chopsticks13">GitHub</a>',
   getCurrentTime(),
@@ -118,9 +118,24 @@ var sendMessage = function(message, position) {
   }, loadingDuration - 50);
 }
 
+var showReadReceipt = function() {
+  var receiptEl = document.createElement('div');
+  receiptEl.classList.add('read-receipt');
+  var now = new Date();
+  var hours = now.getHours();
+  var minutes = now.getMinutes();
+  var timeStr = (hours < 10 ? '0' : '') + hours + ':' + (minutes < 10 ? '0' : '') + minutes;
+  receiptEl.innerHTML = 'Read ' + timeStr;
+  messagesEl.appendChild(receiptEl);
+  setTimeout(function() { receiptEl.style.opacity = '1'; }, 100);
+}
+
 var sendMessages = function() {
   var message = messages[messageIndex];
-  if (!message) return;
+  if (!message) {
+    setTimeout(showReadReceipt, 800);
+    return;
+  }
   sendMessage(message);
   ++messageIndex;
   setTimeout(sendMessages, (message.length * typingSpeed) + anime.random(900, 1200));

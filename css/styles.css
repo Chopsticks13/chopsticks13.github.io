@@ -105,6 +105,17 @@ body.dark-mode {
 #toggle-dark-mode:focus {
   outline: none;
 }
+.read-receipt {
+  font-size: 0.6rem;
+  color: #8e8e93;
+  margin-top: 0.25rem;
+  margin-left: 0.5rem;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+body.dark-mode .read-receipt {
+  color: #98989d;
+}
 @media (max-width: 480px) {
   :root { font-size: 1rem; }
   .messages { padding: 0.75rem; }
